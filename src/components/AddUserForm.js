@@ -19,8 +19,6 @@ const AddUserForm = ({ appFunctions }) => {
     const emptyUser = user.name.trim().length === 0;
     const emptyAge = user.age.trim().length === 0;
 
-    console.log(Math.sign(user.age) === -1);
-
     if (emptyUser && emptyAge) {
       appFunctions.setOpenErrorModel({ open: true, msg: "non-empty values" });
       return;
